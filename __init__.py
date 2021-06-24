@@ -1,6 +1,6 @@
 import sys
 from mycroft import MycroftSkill, intent_handler # type: ignore
-sys.path.append("/usr/lib") # type: ignore
+sys.path.append("/usr/lib/UBUVoiceAssistant") # type: ignore
 from UBUVoiceAssistant.util import util # type: ignore
 from UBUVoiceAssistant.model.grade_item import GradeItem # type: ignore
 
