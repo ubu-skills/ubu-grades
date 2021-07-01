@@ -35,7 +35,10 @@ class UbuGradesSkill(MycroftSkill):
 
             course_grades = [str(grade) for grade in course_grades
                              if grade.get_type() == 'mod' and grade.get_value() is not None]
-            self.speak(util.text_to_speech(course_grades))
+            if len(course_grades) == 0:
+                self.speak_dialog("no.grades.dialog")
+            else:
+                self.speak(util.text_to_speech(course_grades))
         else:
             self.speak_dialog('no.course')
 
